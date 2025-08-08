@@ -9,7 +9,6 @@
 
 body {
     background-color: #e9eaec;
-    overflow-x: hidden;
 }
 
 /* nav bar design start */
@@ -19,7 +18,7 @@ body {
     top: 0;
     width: 100%;
     padding: 1rem 3rem ;
-    background: linear-gradient(135deg, #FF6447, rgb(236, 180, 160));
+    background: linear-gradient(135deg, #f9593d, rgb(247, 139, 100));
     box-shadow: 0px 0px 20px rgba(0,0,0,0.1);
     z-index: 1000;
 }
@@ -62,7 +61,7 @@ body {
 }
 
 .nav-menu a:hover {
-    color: #ff2e0a;
+    color: #821300;
     text-shadow: 0px 0px 5px #fff;
 }
 
@@ -71,7 +70,7 @@ body {
 }
 
 .hamburger-menu span {
-    width: 25px;
+    width: 23px;
     height: 3px;
     background-color: white;
     transition: all 0.3s ease;
@@ -80,12 +79,106 @@ body {
 
 /* nav bar design end */
 
+/* hero section design start */
+
+.hero-section {
+    margin-top: 22px;
+    width: 100%;
+    height: 97vh;
+    background-color: black;
+}
+
+.hero-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+}
+
+.hero-container::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url("Images/hero-1.jpg") top no-repeat;
+    background-size: cover;
+    opacity: 0.2;
+    z-index: -1;
+}
+
+.hero-container h3 {
+    font-family: "Poppins", sans-serif;
+    font-size: clamp(2rem, 5vw, 4rem); /* min, prefered, max */
+    padding: 0 2rem;
+    color: white;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.hero-container p {
+    font-family: "Poppins", sans-serif;
+    color: #e8e8e8;
+    font-weight: 300;
+    padding: 0 2rem;
+    font-size: 18px;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.hero-btns {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    column-gap: 2rem;
+    padding: 0 2rem;
+}
+
+.hero-btns button {
+    padding: 10px 20px;
+    border-radius: 18px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    border: solid transparent;
+    transition: all 0.3s ease;
+}
+
+.donate-now-btn {
+    color: white;
+    background-color: rgb(249, 89, 61);
+}
+
+.learn-more-btn {
+    color: black;
+    background-color: #e8e8e8;
+}
+
+.hero-btns .donate-now-btn:hover {
+    box-shadow: 0 0 10px rgba(249, 89, 61,0.5), 0 0 20px #f64121;
+}
+
+.hero-btns .learn-more-btn:hover {
+    border: solid;
+}
+/* hero section design end */
 
 
 
 
 /* responsive design */
 @media(max-width: 768px) {
+
+    /* responisve nav bar design start */
     .hamburger-menu {
         display: flex;
         flex-direction: column;
@@ -112,8 +205,8 @@ body {
         text-align: center;
         row-gap: 1rem;
         padding: 1.5rem;
-        background: linear-gradient(80deg, #FF6447, rgb(236, 180, 160));
-        box-shadow: 0px 20px 20px rgba(0,0,0,0.1);
+        background: linear-gradient(135deg, #f9593d, rgb(247, 160, 110));
+        box-shadow: 0px 20px 20px rgba(0,0,0,0.2);
 
         /* Animation setup */
         opacity: 0;
@@ -131,4 +224,10 @@ body {
     .nav-bar.active {
         box-shadow: none;
     }
+    /* responisve nav bar design end */
+    
+
+    /* responisve hero section design start */
+    
+    /* responisve hero section design end */
 }
