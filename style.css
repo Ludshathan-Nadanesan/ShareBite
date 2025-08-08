@@ -5,6 +5,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    scroll-snap-type: y mandatory;
 }
 
 body {
@@ -23,7 +24,7 @@ body {
 }
 
 .nav-container {
-    max-width: 1200px;
+    max-width: 1280px;
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
@@ -80,10 +81,10 @@ body {
 
 /* hero section design start */
 .hero-section {
-    margin-top: 22px;
     width: 100%;
-    height: 97vh;
+    height: 100vh;
     background-color: black;
+    scroll-snap-align: start;
 }
 
 .hero-container {
@@ -173,12 +174,22 @@ body {
 
 /* how it works section start */
 .how-it-works {
-    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
     width: 100%;
-    padding: 2rem 2rem 5rem 2rem;
+    padding: 2rem;
+    scroll-snap-align: start;
+}
+.how-it-works-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
-.how-it-works h3 {
+.how-it-works-container h3 {
     font-family: "Poppins", sans-serif;
     font-size: 2rem;
     font-weight: 400;
@@ -189,7 +200,7 @@ body {
     color: #333;
 }
 
-.how-it-works .steps-container {
+.how-it-works-container .steps-container {
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -197,7 +208,7 @@ body {
     flex-wrap: wrap;
 }
 
-.how-it-works .step {
+.how-it-works-container .step {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -211,16 +222,16 @@ body {
     transition: transform 0.3s ease;
 }
 
-.how-it-works .step:hover {
+.how-it-works-container .step:hover {
     transform: translateY(-5px);
 }
 
-.how-it-works .step img {
+.how-it-works-container .step img {
     height: auto;
     width: 100px;
 }
 
-.how-it-works .step .step-text h4 {
+.how-it-works-container .step .step-text h4 {
     font-family: "Poppins", sans-serif;
     font-weight: 400;
     color: #f9593d;
@@ -228,7 +239,7 @@ body {
     margin-bottom: 10px;
 }
 
-.how-it-works .step .step-text p {
+.how-it-works-container .step .step-text p {
     font-family: "Poppins", sans-serif;
     color: #555;
     font-size: 1rem;
